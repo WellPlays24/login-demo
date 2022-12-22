@@ -11,6 +11,14 @@ export const Login = () => {
     const aux = { ...usuario };
     aux[e.target.name] = e.target.value;
     setUsuario(aux);
+    //console.log(e.target.checked);
+  }
+
+  function handleChange1(e) {
+    const aux = { ...usuario };
+    aux[e.target.name] = e.target.checked;
+    setUsuario(aux);
+    //console.log(e.target.checked);
   }
 
   return (
@@ -59,7 +67,7 @@ export const Login = () => {
             type="checkbox"
             id="topping"
             name="remember"
-            onChange={handleChange}
+            onChange={handleChange1}
           />
           Remember
         </div>
